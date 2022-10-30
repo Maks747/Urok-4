@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        double x;
+        double y;
+        double z;
+
+        Scanner reader = new Scanner(System.in);
+
+        System.out.print("Введите три числа");
+        x = reader.nextDouble();
+        y = reader.nextDouble();
+        z = reader.nextDouble();
+
+        double[] mas = {x, y, z};
+
+        double resultat = 0;
+        double resultat1 = 0;
+
+        for ( double m : mas) {
+
+            resultat += m;
+        }
+        System.out.println("Значение среднего арифметического равно: " + resultat / mas.length );
+
+        resultat1 = resultat / 2;
+        int resultat2 = (int)Math.round(resultat1);
+
+        System.out.println("Разделить среднее арифметическое на 2 и округлить в меньшую сторону: " + resultat2 / mas.length);
+
+        if (resultat1 > 3) {
+            System.out.println("Программа выполнена корректно");
+        } else {
+            System.out.println("Серьезно?");
+        }
+
+    }
+}
